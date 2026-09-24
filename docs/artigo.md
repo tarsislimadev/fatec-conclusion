@@ -1,9 +1,9 @@
 # OTIMIZAÇÃO DO ATENDIMENTO E SUPORTE TÉCNICO CORPORATIVO UTILIZANDO ARQUITETURA RAG (RETRIEVAL-AUGMENTED GENERATION) E BANCOS DE DADOS VETORIAIS
 
-**Autor:** Tarsis Lima  
-**Orientador(a):** [Nome do Orientador]  
-**Instituição:** Faculdade de Tecnologia de Rio Claro (Fatec Rio Claro)  
-**Curso:** Bacharelado em Inteligência Artificial  
+Autor: Tarsis Mikael Ventura Dumas de Lima
+Orientador(a): a definir
+Instituição: Fatec Rio Claro
+Curso: Tecnologo em Inteligência Artificial
 
 ---
 
@@ -11,7 +11,7 @@
 
 A rápida expansão de bases de conhecimento e documentações técnicas em ambientes industriais e de TI gera gargalos significativos no atendimento de suporte e na consulta a procedimentos operacionais. Embora os Grandes Modelos de Linguagem (LLMs) apresentem alta capacidade de síntese e compreensão de linguagem natural, seu uso direto em domínios fechados é limitado por alucinações e pela falta de acesso a dados privados. Este trabalho propõe o desenvolvimento e a avaliação de um sistema de suporte técnico inteligente fundamentado na arquitetura RAG (*Retrieval-Augmented Generation*). A solução combina a extração semântica de documentos PDF, vetorização por meio de modelos de *embeddings*, armazenamento no banco vetorial ChromaDB e síntese de respostas citadas utilizando LLMs. Experimentos de avaliação serão conduzidos utilizando o *framework* RAGAS para mensurar a fidelidade (*faithfulness*) e a relevância das respostas obtidas.
 
-**Palavras-chave:** Inteligência Artificial; Retrieval-Augmented Generation; Banco de Dados Vetorial; Suporte Técnico; LangChain.
+Palavras-chave: Inteligência Artificial; Retrieval-Augmented Generation; Banco de Dados Vetorial; Suporte Técnico; LangChain.
 
 ---
 
@@ -27,12 +27,12 @@ Para mitigar tais limitações, a arquitetura RAG (*Retrieval-Augmented Generati
 
 ## 2. PROBLEMATIZAÇÃO E JUSTIFICATIVA
 
-O problema central abordado neste estudo é o **tempo elevado e a taxa de erro na consulta a documentações técnicas extensas em ambientes de suporte técnico e manutenção**.
+O problema central abordado neste estudo é o tempo elevado e a taxa de erro na consulta a documentações técnicas extensas em ambientes de suporte técnico e manutenção.
 
 ### Justificativa Prática e Acadêmica
-- **Impacto Operacional:** A demora na localização de procedimentos específicos resulta em aumento da indisponibilidade de sistemas e equipamentos (*downtime*).
-- **Confiabilidade:** Em ambientes técnicos ou industriais, orientações incorretas podem ocasionar danos a equipamentos ou riscos de segurança do trabalho.
-- **Contribuição Científica:** Avaliar quantitativamente o impacto de diferentes estratégias de *chunking* (divisão de texto) e busca híbrida na precisão do RAG, fornecendo métricas reprodutíveis para a literatura de IA aplicada.
+- Impacto Operacional: A demora na localização de procedimentos específicos resulta em aumento da indisponibilidade de sistemas e equipamentos (*downtime*).
+- Confiabilidade: Em ambientes técnicos ou industriais, orientações incorretas podem ocasionar danos a equipamentos ou riscos de segurança do trabalho.
+- Contribuição Científica: Avaliar quantitativamente o impacto de diferentes estratégias de *chunking* (divisão de texto) e busca híbrida na precisão do RAG, fornecendo métricas reprodutíveis para a literatura de IA aplicada.
 
 ---
 
@@ -69,5 +69,5 @@ A busca semântica fundamenta-se na conversão de textos em vetores densos multi
 
 ## REFERÊNCIAS
 
-- LEWIS, Patrick et al. **Retrieval-augmented generation for knowledge-intensive NLP tasks**. Advances in Neural Information Processing Systems, v. 33, p. 9459-9474, 2020.
-- VASWANI, Ashish et al. **Attention is all you need**. Advances in Neural Information Processing Systems, v. 30, 2017.
+- LEWIS, Patrick et al. Retrieval-augmented generation for knowledge-intensive NLP tasks. Advances in Neural Information Processing Systems, v. 33, p. 9459-9474, 2020.
+- VASWANI, Ashish et al. Attention is all you need. Advances in Neural Information Processing Systems, v. 30, 2017.
