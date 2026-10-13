@@ -42,6 +42,8 @@ Além da redução do tempo de busca, a proposta considera a qualidade da intera
 
 ## 2. PROBLEMATIZAÇÃO E JUSTIFICATIVA
 
+Além da dificuldade de localizar documentos, existe um problema de interpretação do conhecimento encontrado. Um manual pode conter instruções condicionadas ao modelo do equipamento, à versão do software, ao nível de acesso do operador ou a uma etapa de diagnóstico anterior. Uma resposta que apresente apenas uma frase isolada, sem essas condições, pode parecer útil e ainda assim induzir uma decisão incorreta. Por isso, a solução deverá recuperar contexto suficiente para preservar relações de causa, exceções e advertências.
+
 O problema central abordado neste estudo reside na ineficiência temporal e na vulnerabilidade a erros durante a consulta a documentações técnicas extensas em ambientes de suporte técnico, manutenção e operação industrial. Atualmente, a maioria das organizações depende de sistemas de busca baseados em palavras-chave (*keyword search*) integrados a leitores de PDF ou wikis corporativas. Essa abordagem é inerentemente limitada, pois obriga o técnico a possuir um conhecimento prévio do vocabulário exato utilizado pelo redator do manual. Se um manual utiliza o termo "instabilidade térmica" e o técnico busca por "superaquecimento", o sistema pode falhar em retornar o documento relevante, apesar de a semântica ser a mesma.
 
 Quando a informação crítica não é localizada com agilidade, o impacto é sentido em diversas dimensões da operação:
@@ -127,6 +129,8 @@ Após a recuperação inicial, também pode ser aplicada uma etapa de reordenaç
 
 ### 4.3 Embeddings e Bancos de Dados Vetoriais
 
+No contexto deste trabalho, a vetorização não será tratada como uma etapa neutra. O modelo de *embedding* determina quais relações de significado serão aproximadas no espaço vetorial e pode apresentar desempenho diferente em linguagem técnica, siglas ou português do Brasil. A escolha deverá considerar não somente a dimensão dos vetores e o custo de processamento, mas também a capacidade de representar os termos usados pelos profissionais que formularão as consultas.
+
 A eficácia de um sistema RAG depende intrinsecamente da precisão da busca semântica. Diferente da busca tradicional por palavras-chave, que opera na sintaxe (letras e termos), a busca semântica opera no campo do significado. Esta transição é viabilizada pelos *embeddings*, que são representações matemáticas de fragmentos de texto transformados em vetores densos de alta dimensionalidade dentro de um espaço vetorial. 
 
 Através de modelos de *embedding* sofisticados, a semântica de uma frase é capturada em sua totalidade; por exemplo, "falha no motor" e "problema na propulsão" serão mapeadas para coordenadas geometricamente próximas no espaço vetorial, mesmo que não compartilhem nenhum termo idêntico. A distância entre esses vetores é a medida da similaridade semântica.
@@ -183,6 +187,8 @@ O histórico da conversa poderá ser utilizado para interpretar perguntas de aco
 
 ### 5.3 Critérios de Avaliação e Métricas
 
+Para que a comparação seja reproduzível, cada experimento deverá registrar a configuração completa utilizada: versão dos documentos, modelo de *embedding*, tamanho dos fragmentos, sobreposição, quantidade de resultados recuperados e parâmetros de geração. Esse registro permitirá repetir a avaliação após uma atualização da base e identificar se uma mudança de desempenho veio de uma alteração no código, nos dados ou no modelo empregado.
+
 Para validar a eficácia do sistema, será utilizado o *framework* RAGAS (*RAG Assessment*), que permite a avaliação sem a necessidade de um conjunto de respostas "gabarito" (*ground truth*) extensas. As métricas principais serão:
 
 - Fidelidade (*Faithfulness*): Mede se a resposta gerada é derivada exclusivamente do contexto recuperado, combatendo alucinações.
@@ -218,6 +224,18 @@ Espera-se que o protótipo demonstre redução no tempo necessário para localiz
 Espera-se também que a análise revele uma relação de compromisso entre precisão e custo. Configurações com mais contexto podem melhorar a completude da resposta, mas tendem a aumentar o consumo de tokens e o tempo de geração. Da mesma forma, uma quantidade maior de resultados recuperados pode reduzir a chance de omitir uma passagem relevante, mas pode introduzir trechos concorrentes ou dificultar a identificação da evidência principal. A apresentação desses compromissos será tão importante quanto a indicação da configuração com melhor desempenho médio.
 
 Como produto da pesquisa, pretende-se estabelecer um conjunto de recomendações para a implantação de soluções RAG em suporte técnico: requisitos mínimos de qualidade documental, campos de metadados necessários, critérios para atualização da base, regras de encaminhamento para especialistas e métricas que devem ser acompanhadas após a implantação. Dessa forma, o trabalho não ficará restrito à construção de um protótipo, mas poderá apoiar decisões futuras de manutenção, expansão e governança da aplicação.
+
+---
+
+## 6. CONSIDERAÇÕES FINAIS
+
+Este trabalho propõe uma investigação sobre o uso de RAG como mecanismo de apoio ao suporte técnico corporativo, com ênfase na recuperação de evidências, na rastreabilidade das respostas e no controle dos riscos associados à geração automática de texto. A arquitetura escolhida é adequada ao problema porque permite atualizar a base documental sem retreinar o modelo de linguagem e porque torna possível apresentar ao usuário os trechos que fundamentam a orientação. Entretanto, sua eficácia dependerá da qualidade dos documentos, da configuração da recuperação e da disciplina de governança aplicada ao conteúdo indexado.
+
+A principal contribuição esperada é uma avaliação integrada do fluxo de atendimento. Em vez de considerar apenas se a resposta parece correta, a pesquisa deverá verificar se a pergunta foi representada adequadamente, se os fragmentos relevantes foram recuperados, se a síntese respeitou as evidências e se as fontes foram apresentadas de modo compreensível. Essa decomposição permitirá identificar com maior precisão onde estão os ganhos e as limitações da solução.
+
+Os resultados experimentais ainda deverão determinar se a hipótese será confirmada. Caso o sistema reduza o tempo de consulta sem comprometer a fidelidade e a segurança, poderá servir como base para aplicações de apoio em áreas com documentação extensa. Caso os ganhos sejam limitados, a análise dos erros ajudará a definir se são necessários melhores documentos, busca híbrida, reordenação dos resultados, modelos de *embedding* mais adequados ou regras de interação mais rigorosas.
+
+Por fim, a implantação de um assistente RAG deve ser acompanhada por revisão contínua. Novos documentos, alterações de procedimentos, mudanças nos modelos e registros de incidentes podem modificar o comportamento da aplicação ao longo do tempo. A manutenção de uma avaliação periódica, com participação de especialistas e usuários do suporte, será essencial para assegurar que a ferramenta permaneça alinhada às necessidades operacionais e não transforme uma resposta conveniente em uma decisão técnica sem validação.
 
 ---
 
