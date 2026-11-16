@@ -1,0 +1,265 @@
+%PDF-1.4
+%âãÏÓ
+1 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+2 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Length 4113 >>
+stream
+BT
+/B 18 Tf
+1 0 0 1 72.00 767.89 Tm
+(Resumo do artigo) Tj
+/O 13 Tf
+1 0 0 1 72.00 739.89 Tm
+(Otimização do atendimento e suporte técnico corporativo utilizando) Tj
+/O 13 Tf
+1 0 0 1 72.00 721.89 Tm
+(arquitetura RAG e bancos de dados vetoriais) Tj
+/R 11 Tf
+1 0 0 1 72.00 693.89 Tm
+(Ambientes industriais e de tecnologia produzem grandes volumes de manuais, normas,) Tj
+/R 11 Tf
+1 0 0 1 72.00 677.89 Tm
+(procedimentos operacionais, wikis e registros de suporte. Embora a digitalização facilite o) Tj
+/R 11 Tf
+1 0 0 1 72.00 661.89 Tm
+(armazenamento, a fragmentação dessas informações em diferentes formatos e) Tj
+/R 11 Tf
+1 0 0 1 72.00 645.89 Tm
+(repositórios dificulta sua localização. Como consequência, técnicos podem depender de) Tj
+/R 11 Tf
+1 0 0 1 72.00 629.89 Tm
+(especialistas, consultar versões desatualizadas ou utilizar fontes não oficiais, aumentando o) Tj
+/R 11 Tf
+1 0 0 1 72.00 613.89 Tm
+(tempo médio de reparo, os custos de indisponibilidade e o risco de decisões incorretas.) Tj
+/R 11 Tf
+1 0 0 1 72.00 588.89 Tm
+(Grandes Modelos de Linguagem \(LLMs\) podem compreender perguntas e sintetizar) Tj
+/R 11 Tf
+1 0 0 1 72.00 572.89 Tm
+(respostas em linguagem natural, mas seu uso isolado apresenta limitações relevantes em) Tj
+/R 11 Tf
+1 0 0 1 72.00 556.89 Tm
+(ambientes corporativos. Esses modelos não possuem acesso automático à documentação) Tj
+/R 11 Tf
+1 0 0 1 72.00 540.89 Tm
+(privada e podem produzir informações plausíveis, porém incorretas, fenômeno conhecido) Tj
+/R 11 Tf
+1 0 0 1 72.00 524.89 Tm
+(como alucinação. Em suporte técnico, uma instrução errada, a omissão de uma advertência) Tj
+/R 11 Tf
+1 0 0 1 72.00 508.89 Tm
+(ou a utilização de um procedimento incompatível com determinado equipamento pode causar) Tj
+/R 11 Tf
+1 0 0 1 72.00 492.89 Tm
+(prejuízos materiais e riscos à segurança dos operadores. Também devem ser considerados) Tj
+/R 11 Tf
+1 0 0 1 72.00 476.89 Tm
+(requisitos de confidencialidade, controle de acesso, versionamento e auditoria.) Tj
+/R 11 Tf
+1 0 0 1 72.00 451.89 Tm
+(O artigo propõe o desenvolvimento e a avaliação de um sistema de suporte técnico baseado) Tj
+/R 11 Tf
+1 0 0 1 72.00 435.89 Tm
+(na arquitetura Retrieval-Augmented Generation \(RAG\). Essa abordagem separa a) Tj
+/R 11 Tf
+1 0 0 1 72.00 419.89 Tm
+(recuperação de informações da geração textual: primeiro, documentos técnicos são) Tj
+/R 11 Tf
+1 0 0 1 72.00 403.89 Tm
+(processados, divididos em fragmentos e transformados em vetores por modelos de) Tj
+/R 11 Tf
+1 0 0 1 72.00 387.89 Tm
+(embeddings; depois, uma busca semântica identifica os trechos mais relacionados à pergunta;) Tj
+/R 11 Tf
+1 0 0 1 72.00 371.89 Tm
+(por fim, um LLM utiliza esses fragmentos como contexto para produzir uma resposta) Tj
+/R 11 Tf
+1 0 0 1 72.00 355.89 Tm
+(fundamentada. O protótipo deverá utilizar documentos PDF, o framework LangChain, o) Tj
+/R 11 Tf
+1 0 0 1 72.00 339.89 Tm
+(banco vetorial ChromaDB e respostas acompanhadas de fontes, páginas, versões e demais) Tj
+/R 11 Tf
+1 0 0 1 72.00 323.89 Tm
+(metadados disponíveis.) Tj
+/R 11 Tf
+1 0 0 1 72.00 298.89 Tm
+(A solução não deverá apenas responder às dúvidas, mas também indicar as evidências) Tj
+/R 11 Tf
+1 0 0 1 72.00 282.89 Tm
+(utilizadas, permitindo conferência humana e rastreabilidade. Filtros de metadados deverão) Tj
+/R 11 Tf
+1 0 0 1 72.00 266.89 Tm
+(considerar equipamento, unidade, nível de acesso, versão e vigência documental, evitando que) Tj
+/R 11 Tf
+1 0 0 1 72.00 250.89 Tm
+(um trecho semanticamente semelhante, porém desatualizado ou não autorizado, seja usado) Tj
+/R 11 Tf
+1 0 0 1 72.00 234.89 Tm
+(como fundamento. Quando a evidência for insuficiente, houver conflito entre documentos ou) Tj
+/R 11 Tf
+1 0 0 1 72.00 218.89 Tm
+(a consulta envolver risco elevado, o sistema deverá declarar sua limitação e encaminhar o) Tj
+/R 11 Tf
+1 0 0 1 72.00 202.89 Tm
+(caso para validação de um especialista. Dessa forma, a ferramenta será tratada como apoio) Tj
+/R 11 Tf
+1 0 0 1 72.00 186.89 Tm
+(à decisão, e não como autorização para executar intervenções ou substituir normas de) Tj
+/R 11 Tf
+1 0 0 1 72.00 170.89 Tm
+(segurança.) Tj
+ET
+BT
+/R 9 Tf
+1 0 0 1 289.64 32 Tm
+(1) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Length 3939 >>
+stream
+BT
+/R 11 Tf
+1 0 0 1 72.00 767.89 Tm
+(A metodologia está organizada em três etapas principais. A primeira compreende a ingestão) Tj
+/R 11 Tf
+1 0 0 1 72.00 751.89 Tm
+(dos documentos, a extração de texto, o chunking com sobreposição controlada, a geração) Tj
+/R 11 Tf
+1 0 0 1 72.00 735.89 Tm
+(dos embeddings e a indexação no banco vetorial. A segunda implementa o motor de inferência:) Tj
+/R 11 Tf
+1 0 0 1 72.00 719.89 Tm
+(a pergunta é vetorizada, os fragmentos mais relevantes são recuperados e o modelo gera) Tj
+/R 11 Tf
+1 0 0 1 72.00 703.89 Tm
+(uma síntese seguindo regras que proíbem a invenção de valores ou procedimentos. A) Tj
+/R 11 Tf
+1 0 0 1 72.00 687.89 Tm
+(resposta deverá separar orientação, condições de aplicação, advertências e fontes, além de) Tj
+/R 11 Tf
+1 0 0 1 72.00 671.89 Tm
+(passar por verificações estruturais de citação e correspondência com os metadados) Tj
+/R 11 Tf
+1 0 0 1 72.00 655.89 Tm
+(recuperados. A terceira etapa avalia o sistema em condições controladas.) Tj
+/R 11 Tf
+1 0 0 1 72.00 630.89 Tm
+(Para verificar a hipótese de que a busca semântica combinada à geração condicionada) Tj
+/R 11 Tf
+1 0 0 1 72.00 614.89 Tm
+(melhora o atendimento, serão comparados o RAG e uma busca lexical convencional, utilizando) Tj
+/R 11 Tf
+1 0 0 1 72.00 598.89 Tm
+(o mesmo conjunto documental e as mesmas perguntas. As consultas incluirão vocabulário) Tj
+/R 11 Tf
+1 0 0 1 72.00 582.89 Tm
+(semelhante e diferente do utilizado nos manuais, identificadores técnicos, códigos de erro,) Tj
+/R 11 Tf
+1 0 0 1 72.00 566.89 Tm
+(perguntas com informações distribuídas em vários trechos e casos sem resposta na base. O) Tj
+/R 11 Tf
+1 0 0 1 72.00 550.89 Tm
+(framework RAGAS será utilizado para medir fidelidade, relevância da resposta e precisão do) Tj
+/R 11 Tf
+1 0 0 1 72.00 534.89 Tm
+(contexto recuperado. Também serão observados tempo de ingestão, tempo de recuperação) Tj
+/R 11 Tf
+1 0 0 1 72.00 518.89 Tm
+(e resposta, consumo de tokens, qualidade das citações, taxa de abstenção adequada e) Tj
+/R 11 Tf
+1 0 0 1 72.00 502.89 Tm
+(avaliações humanas de correção, completude, clareza e segurança.) Tj
+/R 11 Tf
+1 0 0 1 72.00 477.89 Tm
+(O estudo reconhece que o RAG não garante, por si só, a veracidade das respostas.) Tj
+/R 11 Tf
+1 0 0 1 72.00 461.89 Tm
+(Documentos incompletos, contraditórios ou desatualizados podem gerar resultados) Tj
+/R 11 Tf
+1 0 0 1 72.00 445.89 Tm
+(inadequados, enquanto diagramas, tabelas complexas e imagens podem não ser corretamente) Tj
+/R 11 Tf
+1 0 0 1 72.00 429.89 Tm
+(representados por uma extração textual. A qualidade também depende do modelo de) Tj
+/R 11 Tf
+1 0 0 1 72.00 413.89 Tm
+(embedding, do tamanho dos fragmentos, do número de resultados recuperados e das) Tj
+/R 11 Tf
+1 0 0 1 72.00 397.89 Tm
+(instruções fornecidas ao LLM. Por isso, a proposta inclui governança para atualização,) Tj
+/R 11 Tf
+1 0 0 1 72.00 381.89 Tm
+(versionamento, auditoria, retirada de documentos, proteção de informações confidenciais e) Tj
+/R 11 Tf
+1 0 0 1 72.00 365.89 Tm
+(repetição dos testes após mudanças na base ou nos modelos.) Tj
+/R 11 Tf
+1 0 0 1 72.00 340.89 Tm
+(Espera-se que o protótipo reduza o tempo de localização de procedimentos, aumente a) Tj
+/R 11 Tf
+1 0 0 1 72.00 324.89 Tm
+(relevância dos trechos apresentados e preserve a auditabilidade do atendimento em) Tj
+/R 11 Tf
+1 0 0 1 72.00 308.89 Tm
+(comparação com a busca baseada apenas em palavras-chave. Como contribuição, o trabalho) Tj
+/R 11 Tf
+1 0 0 1 72.00 292.89 Tm
+(pretende identificar os limites da automação, os compromissos entre precisão e custo e as) Tj
+/R 11 Tf
+1 0 0 1 72.00 276.89 Tm
+(situações em que a intervenção humana é indispensável. O resultado deverá apoiar) Tj
+/R 11 Tf
+1 0 0 1 72.00 260.89 Tm
+(recomendações para implantação responsável de soluções RAG em suporte técnico) Tj
+/R 11 Tf
+1 0 0 1 72.00 244.89 Tm
+(corporativo, mantendo a responsabilidade final com profissionais habilitados.) Tj
+ET
+BT
+/R 9 Tf
+1 0 0 1 289.64 32 Tm
+(2) Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 8 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /R 1 0 R /B 2 0 R /O 3 0 R >> >> /Contents 4 0 R >>
+endobj
+7 0 obj
+<< /Type /Page /Parent 8 0 R /MediaBox [0 0 595.28 841.89] /Resources << /Font << /R 1 0 R /B 2 0 R /O 3 0 R >> >> /Contents 5 0 R >>
+endobj
+8 0 obj
+<< /Type /Pages /Kids [6 0 R 7 0 R] /Count 2 >>
+endobj
+9 0 obj
+<< /Type /Catalog /Pages 8 0 R >>
+endobj
+xref
+0 10
+0000000000 65535 f 
+0000000015 00000 n 
+0000000112 00000 n 
+0000000214 00000 n 
+0000000319 00000 n 
+0000004484 00000 n 
+0000008475 00000 n 
+0000008624 00000 n 
+0000008773 00000 n 
+0000008836 00000 n 
+trailer
+<< /Size 10 /Root 9 0 R >>
+startxref
+8885
+%%EOF
