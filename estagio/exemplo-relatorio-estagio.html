@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Relatório de Estágio</title>
+<style>
+  @page { size: A4; margin: 2cm 2cm 2cm 3cm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12pt;
+    line-height: 1.5;
+    color: #000;
+    margin: 0;
+  }
+  .page { page-break-after: always; }
+  .page:last-child { page-break-after: auto; }
+
+  /* Capa */
+  .capa { text-align: center; }
+  .capa .topo { margin-top: 0.5cm; text-transform: uppercase; letter-spacing: 1px; }
+  .capa .autor { margin-top: 6cm; }
+  .capa .titulo { margin-top: 5cm; font-weight: bold; font-size: 14pt; text-transform: uppercase; }
+  .capa .cidade { position: absolute; bottom: 2cm; left: 0; right: 0; text-transform: uppercase; }
+
+  /* Folha de rosto */
+  .rosto .autor { margin-top: 3cm; }
+  .rosto .titulo { margin-top: 6cm; font-weight: bold; font-size: 14pt; text-transform: uppercase; text-align: center; }
+  .rosto .nota { margin-top: 2cm; margin-left: 7cm; text-align: justify; font-size: 11pt; }
+
+  /* Sumário */
+  .sumario h1 { text-align: center; text-transform: uppercase; font-size: 12pt; }
+  .sumario ul { list-style: none; padding: 0; }
+  .sumario li { display: flex; justify-content: space-between; border-bottom: 1px dotted #000; padding: 4px 0; }
+  .sumario li .pag { white-space: nowrap; padding-left: 6px; }
+
+  h1.secao { font-size: 12pt; text-transform: uppercase; text-align: left; margin-top: 0; }
+  h2.sub { font-size: 12pt; text-transform: uppercase; margin-bottom: 4px; }
+  h3.subsub { font-size: 12pt; text-transform: uppercase; margin-bottom: 2px; }
+  p { text-align: justify; text-indent: 1.25cm; margin: 0 0 10px 0; }
+  ul.lista { margin: 0 0 10px 0; }
+  ul.lista li { text-align: justify; margin-bottom: 4px; }
+  .centralizado { text-align: center; text-indent: 0; }
+  .sem-indent { text-indent: 0; }
+
+  /* Agradecimentos / epígrafe */
+  .agradecimentos p { text-indent: 0; }
+
+  /* Referências */
+  .referencias p { text-indent: 0; margin-left: 0; }
+</style>
+</head>
+<body>
+
+<!-- ===================== CAPA ===================== -->
+<section class="page capa">
+  <div class="topo">Faculdade de Tecnologia de São Paulo — FATEC</div>
+  <div class="topo">Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas</div>
+
+  <div class="autor">[NOME COMPLETO DO ESTAGIÁRIO]</div>
+
+  <div class="titulo">Relatório de Estágio Supervisionado<br>Desenvolvimento e Gestão de Projetos de Software</div>
+
+  <div class="cidade">São Paulo — SP<br>2025</div>
+</section>
+
+<!-- ===================== FOLHA DE ROSTO ===================== -->
+<section class="page rosto">
+  <div class="autor sem-indent">[NOME COMPLETO DO ESTAGIÁRIO]</div>
+
+  <div class="titulo">Relatório de Estágio Supervisionado</div>
+
+  <div class="nota">
+    Relatório de estágio supervisionado apresentado ao curso de Análise e Desenvolvimento de Sistemas da Faculdade de Tecnologia de São Paulo — FATEC, como requisito parcial para a conclusão do curso e cumprimento da carga horária de estágio obrigatório.
+  </div>
+
+  <div class="nota">
+    Orientador(a) acadêmico(a): [NOME DO PROFESSOR ORIENTADOR]<br>
+    Supervisor(a) na empresa: [NOME DO SUPERVISOR]
+  </div>
+</section>
+
+<!-- ===================== AGRADECIMENTOS ===================== -->
+<section class="page agradecimentos">
+  <h1 class="secao">Agradecimentos</h1>
+  <p style="margin-top:1cm">Agradeço a Deus, pela força e perseverança ao longo de toda esta jornada acadêmica.</p>
+  <p>Aos meus pais e familiares, pelo apoio incondicional, pela paciência e pela confiança depositada em mim durante toda a graduação.</p>
+  <p>Aos professores da Faculdade de Tecnologia de São Paulo — FATEC, em especial ao(à) meu(minha) orientador(a), pelos ensinamentos transmitidos e pela disponibilidade em compartilhar conhecimento.</p>
+  <p>A equipe da empresa onde realizei o estágio, que me acolheu, orientou e proporcionou um ambiente de aprendizado rico em desafios reais e crescimento profissional.</p>
+  <p>Aos colegas de curso, pelas trocas, pelo companheirismo e pelo apoio mútuo ao longo desta caminhada.</p>
+</section>
+
+<!-- ===================== SUMÁRIO ===================== -->
+<section class="page sumario">
+  <h1>Sumário</h1>
+  <ul>
+    <li><span>1&nbsp;&nbsp;INTRODUÇÃO</span><span class="pag">4</span></li>
+    <li><span>2&nbsp;&nbsp;APRESENTAÇÃO DA EMPRESA</span><span class="pag">5</span></li>
+    <li><span>&nbsp;&nbsp;2.1&nbsp;&nbsp;Histórico</span><span class="pag">5</span></li>
+    <li><span>&nbsp;&nbsp;2.2&nbsp;&nbsp;Missão, Visão e Valores</span><span class="pag">5</span></li>
+    <li><span>&nbsp;&nbsp;2.3&nbsp;&nbsp;Estrutura Organizacional</span><span class="pag">6</span></li>
+    <li><span>3&nbsp;&nbsp;ATIVIDADES DESENVOLVIDAS</span><span class="pag">7</span></li>
+    <li><span>&nbsp;&nbsp;3.1&nbsp;&nbsp;Contexto e Atribuições</span><span class="pag">7</span></li>
+    <li><span>&nbsp;&nbsp;3.2&nbsp;&nbsp;Levantamento de Requisitos e Gestão de Projetos</span><span class="pag">8</span></li>
+    <li><span>&nbsp;&nbsp;3.3&nbsp;&nbsp;Arquitetura e Desenvolvimento do Sistema</span><span class="pag">9</span></li>
+    <li><span>&nbsp;&nbsp;3.4&nbsp;&nbsp;Testes, Documentação e Entrega</span><span class="pag">10</span></li>
+    <li><span>&nbsp;&nbsp;3.5&nbsp;&nbsp;Relação entre Teoria e Prática</span><span class="pag">11</span></li>
+    <li><span>4&nbsp;&nbsp;CONCLUSÃO</span><span class="pag">12</span></li>
+    <li><span>&nbsp;&nbsp;REFERÊNCIAS</span><span class="pag">13</span></li>
+  </ul>
+</section>
+
+<!-- ===================== 1 INTRODUÇÃO ===================== -->
+<section class="page">
+  <h1 class="secao">1&nbsp;&nbsp;Introdução</h1>
+  <p>O presente relatório tem como objetivo apresentar, de forma detalhada e reflexiva, as atividades desenvolvidas durante o estágio supervisionado, realizado no curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas da Faculdade de Tecnologia de São Paulo — FATEC. O estágio constitui etapa obrigatória da formação acadêmica, pois permite ao estudante vivenciar, na prática, os conhecimentos teóricos adquiridos ao longo do curso.</p>
+
+  <p>O estágio foi realizado na empresa <strong>TechSol Sistemas Ltda.</strong>, organização do ramo de tecnologia da informação especializada no desenvolvimento de software sob medida e na prestação de serviços de consultoria em gestão de projetos. O período de realização compreendeu <strong>03 de fevereiro de 2025 a 30 de abril de 2025</strong>, totalizando <strong>300 (trezentas) horas</strong> de atividades práticas.</p>
+
+  <h2 class="sub">1.1&nbsp;&nbsp;Objetivos</h2>
+  <p><strong>Objetivo geral:</strong> aplicar os conhecimentos adquiridos no curso em um ambiente profissional real, desenvolvendo competências técnicas e comportamentais necessárias à atuação do egresso no mercado de trabalho.</p>
+  <p><strong>Objetivos específicos:</strong></p>
+  <ul class="lista">
+    <li>Participar do levantamento e da análise de requisitos de sistemas;</li>
+    <li>Acompanhar o planejamento e a execução de projetos de software utilizando metodologias ágeis;</li>
+    <li>Contribuir para a definição da arquitetura e o desenvolvimento de funcionalidades;</li>
+    <li>Realizar testes e elaborar documentação técnica;</li>
+    <li>Correlacionar a prática profissional com os conteúdos do curso.</li>
+  </ul>
+
+  <h2 class="sub">1.2&nbsp;&nbsp;Justificativa</h2>
+  <p>A realização do estágio justifica-se pela necessidade de aproximar a formação acadêmica da realidade do mercado. A experiência proporciona o desenvolvimento de habilidades técnicas, o amadurecimento profissional e a compreensão do funcionamento das organizações, aspectos essenciais para a inserção do futuro profissional de tecnologia em um cenário cada vez mais competitivo e dinâmico.</p>
+</section>
+
+<!-- ===================== 2 APRESENTAÇÃO DA EMPRESA ===================== -->
+<section class="page">
+  <h1 class="secao">2&nbsp;&nbsp;Apresentação da Empresa</h1>
+
+  <h2 class="sub">2.1&nbsp;&nbsp;Histórico</h2>
+  <p>A <strong>TechSol Sistemas Ltda.</strong> é uma empresa brasileira do setor de tecnologia da informação, fundada em 2012, na cidade de São Paulo. Ao longo de sua trajetória, consolidou-se como referência regional em desenvolvimento de software personalizado e consultoria em gestão de projetos, atendendo clientes de diversos segmentos, como varejo, serviços financeiros e logística.</p>
+  <p>A organização cresceu de forma gradual, ampliando seu quadro de colaboradores e sua carteira de clientes, e hoje conta com equipes multidisciplinares compostas por analistas de sistemas, desenvolvedores, arquitetos de software, gerentes de projetos e profissionais de qualidade (QA).</p>
+
+  <h2 class="sub">2.2&nbsp;&nbsp;Missão, Visão e Valores</h2>
+  <p><strong>Missão:</strong> oferecer soluções tecnológicas inovadoras, confiáveis e de alta qualidade, que impulsionem a transformação digital e o crescimento dos negócios de nossos clientes.</p>
+  <p><strong>Visão:</strong> ser reconhecida como a principal referência em desenvolvimento de software e consultoria de TI da região, pela excelência técnica e pelo compromisso com resultados.</p>
+  <p><strong>Valores:</strong></p>
+  <ul class="lista">
+    <li>Ética e transparência nas relações;</li>
+    <li>Comprometimento com a qualidade e com os prazos;</li>
+    <li>Inovação e melhoria contínua;</li>
+    <li>Respeito às pessoas e trabalho em equipe;</li>
+    <li>Foco no cliente e na entrega de valor.</li>
+  </ul>
+
+  <h2 class="sub">2.3&nbsp;&nbsp;Estrutura Organizacional</h2>
+  <p>A empresa é organizada em áreas funcionais que incluem Diretoria, Desenvolvimento de Software, Gerência de Projetos, Qualidade (QA), Infraestrutura e Recursos Humanos. A estrutura adota uma organização matricial, na qual os profissionais de desenvolvimento são alocados em projetos conforme a demanda, sob a coordenação de gerentes de projeto. O estágio foi acompanhado pela equipe de Desenvolvimento, com supervisão direta do líder técnico da equipe.</p>
+</section>
+
+<!-- ===================== 3 ATIVIDADES ===================== -->
+<section class="page">
+  <h1 class="secao">3&nbsp;&nbsp;Atividades Desenvolvidas</h1>
+
+  <h2 class="sub">3.1&nbsp;&nbsp;Contexto e Atribuições</h2>
+  <p>Durante o período de estágio, fui integrado à equipe de desenvolvimento de um projeto de sistema web para gestão de estoque e vendas, destinado a uma empresa cliente do ramo de varejo. Atuei como estagiário de desenvolvimento, participando das cerimônias ágeis, do levantamento de requisitos e da construção das funcionalidades do sistema, sempre sob supervisão do líder técnico.</p>
+
+  <h2 class="sub">3.2&nbsp;&nbsp;Levantamento de Requisitos e Gestão de Projetos</h2>
+  <p>Participei de reuniões de levantamento de requisitos com o Product Owner, nas quais foram identificadas as necessidades do cliente e registradas em formato de histórias de usuário. Acompanhei o planejamento das sprints, a definição de prioridades em backlog e o acompanhamento do andamento por meio de quadros Kanban, utilizando a metodologia Scrum.</p>
+  <p>Essa etapa permitiu compreender, na prática, conceitos de gestão de projetos como escopo, cronograma, estimativas, priorização de demandas e comunicação entre stakeholders — conteúdos abordados nas disciplinas de Gestão de Projetos de TI ao longo do curso.</p>
+
+  <h2 class="sub">3.3&nbsp;&nbsp;Arquitetura e Desenvolvimento do Sistema</h2>
+  <p>Colaborei na definição da arquitetura do sistema, que seguiu um modelo cliente-servidor com separação entre camadas de apresentação, aplicação e persistência de dados. Participei da modelagem do banco de dados relacional e da construção de APIs REST para integração entre as camadas.</p>
+  <p>Entre as atividades técnicas desenvolvidas, destacam-se:</p>
+  <ul class="lista">
+    <li>Implementação de funcionalidades de cadastro de produtos e movimentação de estoque;</li>
+    <li>Criação de endpoints de API e regras de negócio no back-end;</li>
+    <li>Desenvolvimento de telas de interface para o front-end;</li>
+    <li>Versionamento de código com Git e colaboração em branches;</li>
+    <li>Participação em code reviews e discussões técnicas de arquitetura.</li>
+  </ul>
+  <p>Essas atividades refletem diretamente os conteúdos da disciplina de Arquitetura de Sistemas, que trata de padrões de projeto, camadas, integração de sistemas e boas práticas de desenvolvimento.</p>
+</section>
+
+<!-- ===================== 3 cont ===================== -->
+<section class="page">
+  <h2 class="sub">3.4&nbsp;&nbsp;Testes, Documentação e Entrega</h2>
+  <p>Após o desenvolvimento das funcionalidades, participei da etapa de testes, realizando testes unitários e integrados, bem como a validação de requisitos junto ao Product Owner ao final de cada sprint. Contribuí também para a elaboração da documentação técnica do sistema, incluindo diagramas, manual de endpoints e instruções de implantação.</p>
+  <p>Acompanhei o processo de entrega contínua, no qual cada incremento concluído era integrado, testado e disponibilizado em ambiente de homologação para validação do cliente, seguindo práticas de integração e entrega contínuas (CI/CD).</p>
+
+  <h2 class="sub">3.5&nbsp;&nbsp;Relação entre Teoria e Prática</h2>
+  <p>A experiência de estágio possibilitou perceber de maneira concreta a aplicação dos conhecimentos adquiridos na graduação. Os conceitos de análise e modelagem de sistemas mostraram-se fundamentais no levantamento de requisitos e na definição da arquitetura; as práticas de gestão de projetos orientaram o planejamento e a execução das atividades; e os fundamentos de programação, banco de dados e engenharia de software foram essenciais no desenvolvimento das funcionalidades.</p>
+  <p>Além dos aspectos técnicos, o estágio contribuiu para o desenvolvimento de competências comportamentais (soft skills), como comunicação, trabalho em equipe, organização, proatividade e capacidade de resolver problemas sob prazos — qualidades indispensáveis ao profissional de tecnologia.</p>
+</section>
+
+<!-- ===================== 4 CONCLUSÃO ===================== -->
+<section class="page">
+  <h1 class="secao">4&nbsp;&nbsp;Conclusão</h1>
+  <p>O estágio supervisionado constituiu uma experiência de grande valor para a minha formação acadêmica e profissional. A vivência em um ambiente corporativo real permitiu compreender, de forma integrada, como os conceitos teóricos estudados ao longo do curso são aplicados na prática, especialmente nas áreas de análise e desenvolvimento de sistemas, arquitetura de software e gestão de projetos.</p>
+
+  <p>Durante o período, foi possível desenvolver e aprimorar competências técnicas, como o trabalho com metodologias ágeis, modelagem de dados, desenvolvimento de APIs e controle de versão, bem como competências comportamentais essenciais ao convívio profissional. Os desafios enfrentados, como o cumprimento de prazos, a comunicação com o cliente e a resolução de problemas técnicos, contribuíram significativamente para o meu amadurecimento.</p>
+
+  <p>Concluo que o estágio atingiu plenamente seus objetivos, ao proporcionar a aproximação entre a teoria e a prática e ao consolidar a minha escolha profissional pela área de tecnologia da informação. A experiência reforçou a importância da aprendizagem contínua e do comprometimento com a qualidade, valores que pretendo levar para toda a minha trajetória profissional.</p>
+</section>
+
+<!-- ===================== REFERÊNCIAS ===================== -->
+<section class="page referencias">
+  <h1 class="secao">Referências</h1>
+  <p style="margin-top:1cm">SOMMERVILLE, Ian. <strong>Engenharia de software</strong>. 10. ed. São Paulo: Pearson, 2019.</p>
+  <p>PRESSMAN, Roger S.; MAXIM, Bruce R. <strong>Engenharia de software: uma abordagem profissional</strong>. 8. ed. Porto Alegre: AMGH, 2016.</p>
+  <p>BALZACHI, Eduardo; SOUZA, Rodrigo. <strong>Gestão de projetos de TI: teoria e prática</strong>. São Paulo: Érica, 2018.</p>
+  <p>GOF (GAMMA, Erich et al.). <strong>Padrões de projeto: soluções reutilizáveis de software orientado a objetos</strong>. Porto Alegre: Bookman, 2008.</p>
+  <p>SCRUM. <strong>Guia do Scrum: o guia definitivo para o Scrum</strong>. Disponível em: &lt;https://scrumguides.org&gt;. Acesso em: 19 nov. 2025.</p>
+</section>
+
+</body>
+</html>
