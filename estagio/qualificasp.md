@@ -1,6 +1,6 @@
 # Qualifica SP
 
-## Cursos
+## Meus Cursos
 
 ### Gestão de Projetos de TI
 
